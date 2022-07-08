@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,61 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-  
-    <script src="./assets/script.js"></script>  
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="left-nav">
+        <aside>
+            <div class="city-search">
+                <form id="search-form" class="form">
+                    <h2>Search for a City:</h2>
+                    <input type="text" placeholder="San Diego" title="Type in a city" required />
+                    <button class="btn search-btn" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="city-list">
+                <button class="btn history-btn" type="button">San Diego</button>
+                <!-- display list of previously searched cities as buttons -->
+            </div>
+        </aside>
+    </div>
+    <div class="weather-results">
+        <section class="current-conditions">
+            <h2>City (DD/MM/YYYY)</h2>
+            <p>Temp: </p>
+            <p>Wind: </p>
+            <p>Humidity: </p>
+            <p>UV Index: </p>
+            <!-- display current conditions as:
+                City Name (DD/MM/YYYY) <icon of current weather>
+                Temp: 00.00 degrees F
+                Wind: 0.00 MPH
+                Humidity: 00%
+                UV Index: 0.00 (in a box as: favorable = green, moderate = yellow, severe = red)
+            -->
+        </section>
+        <section class="future-conditions">
+            <h2>5-Day Forecast: </h2>
+            <div class="forecast">
+                <h3>DD/MM/YYYY</h3>
+                <p>Temp: </p>
+                <p>Wind: </p>
+                <p>Humidity: </p>
+            <!-- display future conditions as:
+                (DD/MM/YYYY)
+                <icon of weather for that day>
+                Temp: 00.00 degrees F
+                Wind: 0.00 MPH
+                Humidity: 00%
+                ** Have up to five days displayed **
+            -->
+            </div>
+        </section>
+    </div>
+    <!-- links to scripts-->
+    <script src="./assets/script.js"></script>
 </body>
+
 </html>
