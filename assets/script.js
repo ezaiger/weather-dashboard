@@ -1,16 +1,45 @@
 // Global Variables
+var cityInputEl = document.querySelector(".city-input");
 var searchFormEl = document.querySelector(".form");
 var searchButtonEl = document.querySelector(".search-btn");
 var historyButtonEl = document.querySelector(".history.btn");
-var weatherResults = document.querySelector(".weather-results");
-var currentConditions = document.querySelector(".current-conditions");
+var weatherResultsEl = document.querySelector(".weather-results");
+var currentConditionsEl = document.querySelector(".current-conditions");
+var weatherAPIKey = "faaae616638a9dcb6e179054b7709009";
+
+// Function to use weather API to find entered city
+var weatherSearch = function (cityName) {
+    var urlCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherAPIKey}&units=imperial`;
+    // fetches current weather
+    fetch(urlCurrentWeather)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (currentData) {
+            console.log(currentData)
+            var urlOneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentData.coord.lat}&lon=${currentData.coord.lon}&exclude={part}&appid=${weatherAPIKey}&units=imperial`
+            // fetches 7 day forecast
+            fetch(urlOneCall)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (fivedayData) {
+                    console.log(fivedayData)
+                })
+        })
+};
 
 // Function to search for a city
 var citySearch = function () {
     // obtain input from user
-    // event listener for the search button click
-    // use weather API to find entered city
-}
+    var cityName = cityInputEl.value;
+    weatherSearch(cityName);
+};
+// event listener for the search button click
+searchButtonEl.addEventListener("click", citySearch);
+
+
+
 
 // Function to display history of searched cities
     // button generated showing searched city

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -13,55 +15,150 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <div class="left-nav">
-        <aside>
-            <div class="city-search">
-                <form id="search-form" class="form">
-                    <h2>Search for a City:</h2>
-                    <input type="text" placeholder="San Diego" title="Type in a city" required />
-                    <button class="btn search-btn" type="submit">Search</button>
-                </form>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="left-nav">
+                <aside>
+                    <div class="city-search">
+                        <form id="search-form" class="form">
+                            <h2>Search for a City:</h2>
+                            <div class="mb-3">
+                                <input type="text" class="city-input form-control" placeholder="San Diego" aria-label="San Diego"
+                                    aria-describedby="button-addon2">
+                                <button class="btn search-btn btn-outline-secondary w-100" type="button"
+                                    id="button-addon2">Search</button>
+                            </div>
+
+                            <!-- <input type="text" placeholder="San Diego" title="Type in a city" required />
+                            <button class="btn search-btn" type="submit">Search</button> -->
+                        </form>
+                    </div>
+                    <div class="city-list">
+
+                        <!-- display list of previously searched cities as buttons -->
+                        <ul class="list-group">
+                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
+                                    type="button">City 1</button></li>
+                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
+                                    type="button">City 2</button></li>
+                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
+                                    type="button">City 3</button></li>
+                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
+                                    type="button">City 4</button></li>
+                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
+                                    type="button">City 5</button></li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
-            <div class="city-list">
-                <button class="btn history-btn" type="button">San Diego</button>
-                <!-- display list of previously searched cities as buttons -->
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-12">
+                    <div class="current-conditions">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h3>City (DD/MM/YYYY)<img class="w-2" src="http://openweathermap.org/img/wn/10d@2x.png" /></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p>Temp: </p>
+                                <p>Wind: </p>
+                                <p>Humidity: </p>
+                                <p>UV Index: </p>
+                            </div>
+                        </div>
+
+
+                        <!-- display current conditions as:
+                            City Name (DD/MM/YYYY) <icon of current weather>
+                            Temp: 00.00 degrees F
+                            Wind: 0.00 MPH
+                            Humidity: 00%
+                            UV Index: 0.00 (in a box as: favorable = green, moderate = yellow, severe = red)
+                        -->
+                    </div>
+                </div>
             </div>
-        </aside>
+            <h3>5-Day Forecast: </h3>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MM/DD/YYYY</h5>
+                            <img class="w-50" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Wind: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MM/DD/YYYY</h5>
+                            <img class="w-50" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Wind: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MM/DD/YYYY</h5>
+                            <img class="w-50" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Wind: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MM/DD/YYYY</h5>
+                            <img class="w-50" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Wind: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MM/DD/YYYY</h5>
+                            <img class="w-50" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Wind: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="weather-results">
-        <section class="current-conditions">
-            <h2>City (DD/MM/YYYY)</h2>
-            <p>Temp: </p>
-            <p>Wind: </p>
-            <p>Humidity: </p>
-            <p>UV Index: </p>
-            <!-- display current conditions as:
-                City Name (DD/MM/YYYY) <icon of current weather>
-                Temp: 00.00 degrees F
-                Wind: 0.00 MPH
-                Humidity: 00%
-                UV Index: 0.00 (in a box as: favorable = green, moderate = yellow, severe = red)
-            -->
-        </section>
-        <section class="future-conditions">
-            <h2>5-Day Forecast: </h2>
-            <div class="forecast">
-                <h3>DD/MM/YYYY</h3>
-                <p>Temp: </p>
-                <p>Wind: </p>
-                <p>Humidity: </p>
-            <!-- display future conditions as:
+
+    <!-- <div class="future-conditions">
+        
+        <div class="forecast">
+        
+            
+             display future conditions as:
                 (DD/MM/YYYY)
                 <icon of weather for that day>
                 Temp: 00.00 degrees F
                 Wind: 0.00 MPH
                 Humidity: 00%
                 ** Have up to five days displayed **
-            -->
-            </div>
-        </section>
-    </div>
+            
+        </div>
+    </div> -->
     <!-- links to scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
