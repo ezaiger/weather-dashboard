@@ -38,9 +38,6 @@ var citySearch = function () {
 // event listener for the search button click
 searchButtonEl.addEventListener("click", citySearch);
 
-
-
-
 // Function to display history of searched cities
     // button generated showing searched city
     // newest search appears at top
