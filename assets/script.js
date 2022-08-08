@@ -10,8 +10,6 @@ var tempForecastEl = document.querySelector(".temp");
 var windForecastEl = document.querySelector(".wind");
 var humidityForecastEl = document.querySelector(".humidity");
 var uviForecastEl = document.querySelector(".uv-index")
-// Five Day Forecast Variables (FDF)
-
 var weatherResultsEl = document.querySelector(".weather-results");
 var currentConditionsEl = document.querySelector(".current-conditions");
 var weatherAPIKey = "faaae616638a9dcb6e179054b7709009";
@@ -34,15 +32,12 @@ var weatherSearch = function (cityName) {
                 })
                 .then(function (fivedayData) {
                     console.log(fivedayData)
-                    // current weather information
                     cityResultEl.innerHTML = currentData.name + moment(currentData.dt, 'X').format(" (MM/DD/YYYY) ") + `<img class="w-2"
                     src="http://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png" />`;
                     tempForecastEl.innerHTML = "Temp: " + fivedayData.current.temp;
                     windForecastEl.innerHTML = "Wind: " + fivedayData.current.wind_speed;
                     humidityForecastEl.innerHTML = "Humidity: " + fivedayData.current.humidity;
                     uviForecastEl.innerHTML = "UV Index: " + fivedayData.current.uvi;
-                    // five day weather information
-
                 })
         })
 };
