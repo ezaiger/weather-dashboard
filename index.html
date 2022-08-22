@@ -22,11 +22,11 @@
                     <div class="city-search">
                         <form id="search-form" class="form">
                             <h2>Search for a City:</h2>
-                            <div class="mb-3">
+                            <div class="search-form mb-3">
                                 <input type="text" class="city-input form-control" placeholder="San Diego"
                                     aria-label="San Diego" aria-describedby="button-addon2">
                                 <button class="btn search-btn btn-outline-secondary w-100" type="button"
-                                    id="button-addon2">Search</button>
+                                    id="button-addon2">Search</button><hr>
                             </div>
 
                             <!-- <input type="text" placeholder="San Diego" title="Type in a city" required />
@@ -34,19 +34,10 @@
                         </form>
                     </div>
                     <div class="city-list">
-
                         <!-- display list of previously searched cities as buttons -->
                         <ul class="list-group" id="searchedCity">
                             <li class="list-group-item border-0"><button class="btn history-btn w-100"
-                                    type="button">City 1</button></li>
-                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
-                                    type="button">City 2</button></li>
-                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
-                                    type="button">City 3</button></li>
-                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
-                                    type="button">City 4</button></li>
-                            <li class="list-group-item border-0"><button class="btn history-btn w-100"
-                                    type="button">City 5</button></li>
+                                    type="button"></button></li>
                         </ul>
                     </div>
                 </aside>
@@ -67,18 +58,9 @@
                                 <p class="temp">Temp: </p>
                                 <p class="wind">Wind: </p>
                                 <p class="humidity">Humidity: </p>
-                                <p class="uv-index">UV Index: </p>
+                                <p class="uv-index">UV Index: <span id="uv-condition"></span></p>
                             </div>
                         </div>
-
-
-                        <!-- display current conditions as:
-                            City Name (DD/MM/YYYY) <icon of current weather>
-                            Temp: 00.00 degrees F
-                            Wind: 0.00 MPH
-                            Humidity: 00%
-                            UV Index: 0.00 (in a box as: favorable = green, moderate = yellow, severe = red)
-                        -->
                     </div>
                 </div>
             </div>

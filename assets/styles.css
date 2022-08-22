@@ -13,6 +13,53 @@ h1 {
     padding: 10px 0 10px 0;
 }
 
+hr {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.city-search {
+    margin-left: 15px;
+}
+
+.city-list {
+    margin-left: 15px;
+}
+
+.history-btn {
+    background-color: #8e9aaf;
+    color: white;
+}
+
+.search-btn {
+    background-color: #1e96fc;
+    color: white;
+    margin-top: 5px;
+}
+
 /* Left Navigation/Aside */
+#uv-condition {
+    padding: 2px 15px 2px 15px;
+    border-radius: 5px;
+}
+
+/* uvi index: favorable */
+.green {
+    background-color: #008000;
+    color: white;
+}
+
+/* uvi index: moderate */
+.orange {
+    background-color: #fb8500;
+    color: white;
+}
+
+/* uvi index: severe */
+.red {
+    background-color: #d90429;
+    color: white;
+}
 
 /* Weather Results Section */
