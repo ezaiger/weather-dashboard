@@ -14,5 +14,6 @@ https://ezaiger.github.io/weather-dashboard/
 
 ## Contribution
 * Code by EZaiger
+* Tutor assistance by Phil L.
 
-![alt text](assets/images/ezaiger.github.io_weather-dashboard_.png "Screenshot of completed application")
+![alt text](assets/images/weather-dashboard.png "Screenshot of completed application")

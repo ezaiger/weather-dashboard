@@ -7,6 +7,7 @@
 /* Header */
 h1 {
     justify-content: center;
+    width: 100%;
     display: flex;
     background: linear-gradient(to right, rgb(27, 118, 236), rgb(86, 11, 156));
     color: white;
